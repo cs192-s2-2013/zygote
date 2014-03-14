@@ -36,4 +36,12 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/kanban", method = RequestMethod.GET)
+	public String test(Model model) {
+	    String greetings = "Greetings, Spring MVC!";
+	    model.addAttribute("message", greetings);
+	 
+	    return "kanban";
+	}
+	
 }
